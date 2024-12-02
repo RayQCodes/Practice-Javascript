@@ -312,6 +312,7 @@ else{
 
 
 //strict equality operator
+/*/
 const PI = "3.14";
 
 
@@ -325,3 +326,29 @@ else{
 
 
 //so for === this compares data types along with the values
+/*/
+
+
+
+//while loops
+//let username;
+
+//while(username === "" || username == null){
+  //  username = window.prompt("Enter your username") ;  
+//} 
+//console.log(`Hello ${username}`);
+
+
+let loggedIn = false;
+let username;
+let password;
+
+while(!loggedin){
+    username = window.prompt("Enter your username");
+    password = window.prompt("Enter your Password");
+
+    if(username === "myUsername" && password === "Mypassword"){
+
+    }
+}
+
