@@ -301,11 +301,27 @@ else{
 
 
 //using nots
-const isSunny = false;
+//const isSunny = true;
 
-if(!isSunny){
-    console.log("it is cloudy");
+//if(!isSunny){
+ //   console.log("it is cloudy");
+//}
+//else{
+ //   console.log("it is sunny");
+//}
+
+
+//strict equality operator
+const PI = "3.14";
+
+
+if(PI !== "3.14"){
+    console.log("That is not PI");
 }
 else{
-    console.log("it is sunny");
+    console.log("That is pi");
 }
+
+
+
+//so for === this compares data types along with the values
