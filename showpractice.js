@@ -1,26 +1,22 @@
-const IncreaseBTN = document.getElementById("IncreaseBTN");
-const DecreaseBTN = document.getElementById("DecreaseBTN");
-const ResetBTN = document.getElementById("ResetBTN");
-const display = document.getElementById("display");
-
-let count = 0;
-
-IncreaseBTN.onclick = function(){
+const increasebutton = document.getElementById("incbutton");
+const decreasebutton = document.getElementById("decbutton");
+const resetbutton = document.getElementById("resbutton");
+const display = document.getElementById("display")
+let count=0;
+increasebutton.onclick = function(){
     count += 1;
     display.textContent = count;
 }
 
 
-DecreaseBTN.onclick = function(){
+decreasebutton.onclick = function(){
     count -= 1;
     display.textContent = count;
 }
 
 
 
-ResetBTN.onclick = function(){
+resetbutton.onclick = function(){
     count = 0;
     display.textContent = count;
 }
-
-
