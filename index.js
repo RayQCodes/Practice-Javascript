@@ -386,3 +386,67 @@ for(let i =1; i <= 20; i++){
 }
 
 /*/
+
+
+
+
+//functions
+/*/
+function happyBirthday(username, age){
+    console.log("happy birthday to you!");
+    console.log("happy birthday to you!");
+    console.log(`happy birthday dear ${username}!`);
+    console.log(`You are ${age} years old`);
+}
+
+happyBirthday("Bro Code", 25);
+happyBirthday("spongebob",30);
+happyBirthday("patrick",37);
+*/
+
+
+/*/
+
+function add(x,y){
+    return x + y;
+}
+
+function sub(x,y){
+    return x - y ;
+}
+
+
+function multiply(x,y){
+    return x * y ;
+}
+
+
+function divide(x,y){
+    return x / y ;
+}
+
+
+function isEven(number){
+    if(number % 2 === 0){
+        return number % 2 === 0 ? true : false;
+}
+
+console.log(multiply(2,3));
+console.log(divide(2,3));
+console.log(sub(2,3));
+console.log(add(2,3));
+
+
+console.log(isEven(11));
+
+/*/
+
+
+
+function isValidEmail(email){
+return (email.includes("@")) ? true : false;
+
+}
+console.log(isValidEmail("pbhattargmail.com"));
+console.log(isValidEmail("elonmusk.com"));
+console.log(isValidEmail("zukerbrong@meta.com"));
