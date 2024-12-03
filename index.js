@@ -442,7 +442,7 @@ console.log(isEven(11));
 /*/
 
 
-
+/*/
 function isValidEmail(email){
 return (email.includes("@")) ? true : false;
 
@@ -450,3 +450,12 @@ return (email.includes("@")) ? true : false;
 console.log(isValidEmail("pbhattargmail.com"));
 console.log(isValidEmail("elonmusk.com"));
 console.log(isValidEmail("zukerbrong@meta.com"));
+
+
+/*/
+
+
+
+//variable scopes
+
+
