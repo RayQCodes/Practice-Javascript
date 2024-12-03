@@ -1,13 +1,15 @@
 const minimum = 1;
 const maximum = 3;
 let running = true;
-let guess;1
+let guess;
 let attempts = 0;
 const answer = Math.floor(Math.random() * (maximum)) + minimum;
+
 
 while (running) {
     guess = window.prompt(`Enter a number between ${minimum} and ${maximum}`);
     guess = Number(guess);
+
 
     if (isNaN(guess)) {
         window.alert("Please enter a valid number.");
@@ -25,3 +27,5 @@ while (running) {
         }
     }
 }
+
+
