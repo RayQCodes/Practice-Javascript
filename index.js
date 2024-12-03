@@ -338,17 +338,51 @@ else{
 //} 
 //console.log(`Hello ${username}`);
 
-
-let loggedIn = false;
+/*/
+let loggedIn = true;
 let username;
 let password;
 
-while(!loggedin){
+do{
     username = window.prompt("Enter your username");
     password = window.prompt("Enter your Password");
 
     if(username === "myUsername" && password === "Mypassword"){
+        loggedIn = true;
+        console.log("You are logged in!");
+    }
+    else{
+        console.log("Invalid Credentials Please Try Again");}
+    }while(!loggedIn)
 
+
+/*/
+
+
+//for loops
+
+//for(let i = 10; i > 0; i-=2){
+//    console.log(i);
+//}
+//console.log("Happy new year");
+
+
+//continued/break for loops:
+
+
+
+//continue key words allow u to skip an iteration
+
+//break is breaks out of loops completely
+/*/
+
+for(let i =1; i <= 20; i++){
+    if(i == 13){
+        break;
+    }
+    else{
+        console.log(i);
     }
 }
 
+/*/
