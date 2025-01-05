@@ -459,21 +459,172 @@ console.log(isValidEmail("zukerbrong@meta.com"));
 //variable scopes
 
 
+/*/
 let x = 3;  //global variable
 
 
+
+// so local variables are prioritized
 function2();
 
 
 function function1(){
-    let x = 1;
     console.log(x);
 }
 
 function function2(){
-    let x = 2;
     console.log(x);
 }
 
 
+
+/*/
+
+
+//arrays
+
+
+//let fruits = ["apple", "orange" , "bananna", "coccunut"];
+
+
+//fruits.push("coconut");
+//fruits.pop();
+//fruits.unshift("Mango");
+//fruits.shift();
+
+/*/
+let numOfFruits = fruits.length;
+let index = fruits.indexOf("mango");
+console.log(index);
+
+
+console.log(fruits[0]);
+console.log(fruits[1]);
+console.log(fruits[2]);
+
+/*/
+
+
+
+//using a for loop for arrays
+
+
+/*/
+for(i = fruits.length; i  >= 0 ; i--){
+    console.log(fruits[i])
+}
+
+fruits.sort().reverse();
+for(let fruit of fruits)
+    console.log(fruit);
+
+
+
+/*/
+
+
+
+//spread operator
+
+
+
+/*/
+let numbers = [1,2,3,4,5];
+
+
+let maximum = Math.max(...numbers);
+
+let minimum = Math.min(...numbers);
+console.log(minimum);
+
+/*/
+
+/*/
+let username = "Raymond Quan";
+let letters = [...username].join("-");
+
+console.log(letters);
+/*/
+
+
+//arrays of fruits
+
+//spread operator
+//let fruits = ["apple", "orange","coconut"];
+
+//let vegetables = ["carrots","celery","tomatoes"];
+
+
+//let foods = [...fruits, ...vegetables, "eggs", "milk"] ;
+//console.log(foods);
+
+
+//rest parameters
+/*/
+function openFridge(...foods){
+    console.log(...foods);
+}
+
+function getFood(...foods){
+    return foods;
+
+}
+const food1 = "pizza";
+const food2 = "burger";
+const food3 = "hotdog";
+const food4 = "sushi";
+const food5 = "ramen";
+
+
+//openFridge(food1,food2,food3,food4,food5);
+
+
+const foods = getFood(food1,food2,food3,food4,food5);
+
+
+console.log(foods);
+
+/*/
+
+/*/
+function sum(...numbers){
+    let result = 0;
+    for(let number of numbers){
+        result += number;
+    }
+    return result;
+}
+const total = sum(1,2,3,4,5);
+
+console.log(`Your total is $${total}`);
+
+/*/
+
+
+/*/
+function getAverage(...numbers){
+    let result = 0;
+    for(let number of numbers){
+        result += number;
+    }
+    return result / numbers.length;
+}
+
+
+const total = getAverage(75,100,85,90,50);
+
+
+console.log(total);
+/*/
+
+/*/
+function combineStrings(...strings){
+    return strings.join(" ");
+}
+
+
+const fullname = combineStrings("Mr", "Spongebob","Squarepants", "III");
+console.log(fullname);
+
+/*
 
