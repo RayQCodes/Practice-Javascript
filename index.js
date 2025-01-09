@@ -626,5 +626,632 @@ function combineStrings(...strings){
 const fullname = combineStrings("Mr", "Spongebob","Squarepants", "III");
 console.log(fullname);
 
-/*
+/*/
+
+
+//random password generator
+
+/*/
+function generatePassword(length, includeLowercase,includeUppercase,includeNumbers,includeSymbols){
+    const lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
+    const uppercaseChar = "ABCEDFGHIJKLMNOPQRSTUVWXYZ";
+    const Numberchars = "0123456789";
+    const symbolChars = "!@#$%&*()+-=";
+
+    let allowedChars = "";
+    let password = "";
+
+    allowedChars += includeLowercase ? lowercaseChar : "";
+    allowedChars += includeUppercase ? uppercaseChar : "";
+    allowedChars += includeNumbers ? Numberchars : "";
+    allowedChars += includeSymbols ? symbolChars : "";
+
+    if(length <= 0){
+     return  '(password length must be at least 1)';
+    }
+
+    if(allowedChars.length === 0){
+        return '(at least 1 set of characters needs to be selected';
+    }
+
+    for(let i = 0; i < length; i++){
+        const randomIndex = Math.floor(Math.random() * allowedChars.length);
+        password += allowedChars[randomIndex];
+
+        return password;
+    }
+}
+
+const passwordLength = 12;
+const includeLowercase = true;
+const includeUppercase = true;
+const includeNumbers = true;
+const includeSymbols = true;
+
+
+
+const password = generatePassword(passwordLength,includeLowercase,includeUppercase,includeNumbers,includeSymbols);
+
+
+
+console.log(`Generated password : ${password}`);
+/*/
+
+
+//callbacks
+/*/
+
+hello(wait);
+
+
+
+function hello(callback){
+    console.log("hello");
+    callback();
+}
+
+
+function leave(){
+    console.log("Leave!");
+}
+
+
+
+function wait(){
+    console.log("wait");
+}
+
+
+function goodbye(){
+    console.log("goodbye");
+}
+
+/*/
+
+
+/*/
+
+sum(DisplayConsole, 1, 2);
+
+
+
+function sum(callback, x, y){
+    let result = x + y;
+    callback(result);
+
+
+function DisplayConsole(result){
+    console.log(result);
+}
+
+
+
+function displayPage(result){
+    document.getElementById("myH1").textContent = result;
+
+}
+}
+/*/
+
+/*/
+
+
+let numbers = [1,2,3,4,5];
+
+
+
+
+numbers.forEach(square);
+
+
+numbers.forEach(display);
+
+
+
+function double(element, index, array){
+    array[index] = element * 2;
+
+}
+
+
+
+function triple(element, index, array){
+    array[index] = element * 3;
+
+}
+
+
+
+
+function square(element,index, array){
+    array[index] = Math.pow(element,2);
+}
+
+
+
+
+
+
+function cube(element,index, array){
+    array[index] = Math.pow(element,2);
+}
+
+
+
+
+
+
+
+function display(element){
+    console.log(element);
+
+}
+
+/*/
+
+
+/*/
+let fruits = ["apple","orange","bannana","coconut"];
+
+
+fruits.forEach(capitalize);
+fruits.forEach(display);
+
+function upperCase(enulement,index,array){
+    array[index] = element.toUpperCase();
+}
+function display(element){
+    console.log(element);
+}
+
+
+
+
+
+function capitalize(element,index,array){
+    array[index] = element.charAt[0].toUpperCase() + element.slice(1);
+}
+
+
+function lowercase(element,index,array){
+    array[index] = element.toLowerCase();
+}
+
+/*/
+
+/*/
+
+const numbers = [1,2,3,4,5];
+
+
+const squares = numbers.map(square);
+
+
+
+const cubes = numbers.map(cube);
+console.log(squares);
+
+
+
+function square(element){
+    return Math.pow(element,2)
+}
+
+function cube(element){
+    return Math.pow(element,3)
+}
+    /*/
+
+/*/
+const students = ["spongebob","patrick","squidward", "sandy"];
+
+const studentsUpper = students.map(upperCase);
+
+const StudentsLower = students.map(lowercase);
+
+function upperCase(element){
+    return element.toUpperCase();
+}
+
+
+function lowercase(element){
+    return element.toLowerCase();
+}
+
+/*/
+
+
+/*/
+const dates = ["2024-1-10","2025-2-20","2026-2-23"];
+
+function formatDates(element){
+
+    const parts = element.split("-");
+    return `${parts[1]}`/${parts[2]}/${parts[0]};
+
+
+
+}
+
+/*/
+
+
+
+
+/*/
+//filtering
+
+let numbers = [1,2,3,4,5,6.7];
+
+
+letevenNums = numbers.filter(isEven);
+
+letODDNUMs = numbers.filter(isODD);
+
+
+
+console.log(evenNums);
+
+
+function isEven(element){
+    return element % 2 === 0;
+}
+
+
+function isODD(element){
+    return element % 2 != 0;
+}
+
+
+
+const age = [16,17,18,18,19,20,60];
+
+
+function isAdult(element){
+    return element >=
+}
+
+
+/*/
+
+
+/*/
+//class User{
+    static userCount = 0;
+
+    constructor(username){
+        this.username = username;
+        User.userCount++;
+    }
+}
+
+
+const user1 = new User("Spongebob")
+const user2 = new User("Patrick")
+const user3 = new User("Sandy")
+
+
+
+const user1 = new User("Spongebob");
+
+/*/
+
+
+
+//inheritaance
+/*/
+// helps with code reusability
+class Animal {
+    alive = true;
+
+    eat() {
+        console.log(`This ${this.name} is eating`);
+    }
+
+    sleep() {
+        console.log(`This ${this.name} is sleeping`);
+    }
+}
+
+class Rabbit extends Animal {
+    name = "rabbit";
+}
+
+class Fish extends Animal {
+    name = 'fish';
+}
+
+class Hawk extends Animal{
+    name = "Hawk";
+}
+
+
+const rabbit = newRabbit();
+const fish = new Fish();
+const hawk = new Hawk();
+
+
+rabbit.alive = deadl
+console.log(rabbit.alive);
+
+
+rabbit.eat();
+rabbit.sleep();
+
+/*/
+
+
+
+/*/
+class Animal {
+    constructor(name, age) {
+    }
+  }
+  
+  class Rabbit extends Animal {
+    constructor(name, age, runSpeed) {
+      this.name = name;
+      this.age
+      this.runSpeed = this.runSpeed;
+  
+
+
+class Fish extends Animal{
+    constructor(name, age, SwimSpeed) {
+        this.name = name;
+        this.age
+        this.SwimSpeed = this.swimSpeed;
+}
+
+
+class Hawk extends Animal{
+    constructor(name, age, FlySpeed) {
+        this.name = name;
+        this.age
+        this.Flyspeed = this.Flyspeed;
+}
+ 
+
+
+const rabbit  = new Rabbit("rabbit", 1, 25);
+const fish  = new Fish("fish", 1, 25);
+const hawk = new Hawk("hawk",2,4);
+
+
+
+console.log(hawk.name);
+console.log(hawk.age);
+console.log(hawk.flyspeed);
+
+/*/
+
+
+
+//destructuring 
+/*/
+let a = 1;
+let b = 1;
+
+
+[a,b] = [b,a];
+
+console.log(a);
+console.log(b);
+
+
+
+
+
+const colors = ["red","green","blue,"black", "white"];
+
+    consr [firstcolor, secondcolor, thirdcolor] = colors;
+
+
+    console.log(foirstcolor);
+    console.log(secondcolor);
+    console.log(thirdcolor);
+
+
+
+
+
+function displayPerson({firstName,lastName,age,job}){
+console.log(name : ${firstname}, ${lastname});
+}
+
+
+
+
+displayPerson();
+
+
+    const person1 = {
+        firstName: "Spongebob",
+        lastName: "SquarePants",
+        age: 30,
+        job: "Fry Cook",
+    }
+    
+    const person2 = {
+        firstName: "Patrick",
+        lastName: "Star",
+        age: 34,
+    }
+
+    const { firstName, lastName, age, job="Unemployyed" } = person1;
+
+    console.log(firstName);
+    console.log(lastName);
+    console.log(age);
+    console.log(job);
+    
+    
+
+
+
+
+    //nested objects
+    const person = {
+        fullName: "Spongebob Squarepants",
+        age: 30,
+        isStudent: true,
+        hobbies: ["karate", "jellyfishing", "cooking"],
+        address: {
+            street: "124 Conch St.",
+            city: "Bikini Bottom",
+            country: "Int. Water"
+        }
+    };
+    
+    console.log(person.fullName);
+    console.log(person.age);
+    console.log(person.isStudent);
+    console.log(person.address.hobbies[2]);
+    console.log(person.address.country);
+
+
+    for ( const property in person.address){
+        console.log(person.address[property]);
+    }
+
+
+
+    class Person {
+        constructor(name, age, ...address) {
+            this.name = name;
+            this.age = age;
+            this.address = new Address(...address);
+        }
+    }
+    
+    class Address {
+        constructor(street, city, country) {
+            this.street = street;
+            this.city = city;
+            this.country = country;
+        }
+    }
+    
+    const person1 = new Person("Spongebob", 30, "124 Conch St.", "Bikini Bottom", "Int. Water");
+    
+
+
+    const person2 = new Person("Patrick", 37, "123 Conch St.", "Bikini Bottom", "Int. Water");
+
+    
+    const person3 = new Person("squidward", 45, "126 Conch St.", "Bikini Bottom", "Int. Water");
+
+
+    console.log(person3.address.country);
+
+
+
+//array of objects
+
+const fruits = [
+    { name: "apple", color: "red", calories: 95 },
+    { name: "orange", color: "orange", calories: 45 },
+    { name: "banana", color: "yellow", calories: 105 },
+    { name: "coconut", color: "white", calories: 159 },
+    { name: "pineapple", color: "yellow", calories: 37 }
+];
+
+
+console.log(fruits[0].calories);
+
+fruits.push(name: "grapes")
+
+fruits.splice(1,2);
+
+fruits.forEach(fruit => console.log(fruit.calories))
+
+
+
+const fruitNames = fruit.map(fruit => fruit.name);
+
+const yellowfruits = fruits.filter(fruit => fruit.color === "yellow");
+
+const lowcalfruits = fruits.filter(fruit => fruit.calories < 100);
+console.log(yellowfruits);
+
+
+
+const maxfruit = fruits.reduce(max , fruit) => fruits.calories > max.calories ? fruit : max);
+
+console.log(maxFruit);
+
+
+
+
+const minfruit = fruits.reduce(max , fruit) => 
+    fruits.calories < max.calories ? fruit : min);
+
+console.log(minfruit);
+
+/*/
+
+//sort methods
+/*/
+const people = [
+    { name: "Spongebob", age: 30, gpa: 3.0 },
+    { name: "Patrick", age: 37, gpa: 1.5 },
+    { name: "Squidward", age: 51, gpa: 2.5 },
+    { name: "Sandy", age: 27, gpa: 4.0 }
+];
+
+people.sort((a, b) => b.name.localeCompare(a.name));
+
+console.log(people);
+
+/*/
+
+
+
+//shuffling an array
+// Fisher-Yates algorithm
+
+/*/
+const cards = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
+
+shuffle(cards);
+
+console.log(cards);
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const random = Math.floor(Math.random() * (i + 1));
+        [array[i], array[random]] = [array[random], array[i]];
+    }
+}
+/*/
+
+//date objects
+/*/
+
+const date = new Date();
+
+const year = date.getFullYear();
+const month = date.getMonth();
+const day = date.getDate();
+const hour = date.getHours();
+const minutes = date.getMinutes();
+
+console.log(year);
+console.log(month);
+console.log(day);
+console.log(hour);
+console.log(minutes);
+console.log(seconds);
+console.log(daysOFweek);
+
+DataTransfer.setFullYear(2025);
+date.setMonth(0);
+date.setDate(1);
+
+
+/*/
+
+
+
+
 
