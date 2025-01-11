@@ -1249,9 +1249,147 @@ date.setMonth(0);
 date.setDate(1);
 
 
+function celar timer()
+/*/
+
+
+//
+/*/
+function func1(callback) {
+    setTimeout(() => {
+        console.log("Task 1");
+        callback();
+    }, 3000);
+}
+
+function func2() {
+    console.log("Task 2");
+    console.log("Task 3");
+    console.log("Task 4");
+}
+
+func1(func2);
+
+
+
+//error handling 
+try {
+    console.log(x);
+    // NETWORK ERRORS
+    // PROMISE REJECTION
+    // SECURITY ERRORS
+} catch (error) {
+    console.error(error);
+}
+finally{
+    //closefiles
+    //closeconnections
+    // release resources
+    console.log("this always executes");
+}
+
+try {
+    const dividend = Number(window.prompt("Enter a dividend: "));
+    const divisor = Number(window.prompt("Enter a divisor: "));
+
+    if (divisor == 0) {
+        throw new Error("You can't divide by zero!");
+    }
+    if (isNaN(dividend) || isNaN(divisor)) {
+        throw new Error("Values must be a number");
+    }
+
+    const result = dividend / divisor;
+    console.log(result);
+} catch (error) {
+    console.error(error);
+}
+
+}
+/*/
+/*/
+
+document.title = " my website";
+document.body.style.backgroundColor = "hsl(0,0,15)"
+
+console.dir(document);
+
+
+const username = "Bro Code";
+const welcomeMsg = document.getElementById("welcome-msg")
+
+
+welcomeMsg.textcontent += username === "" ? 'Guest' : username;
+
+console.dir(document);
+
+//element selectors:
+const myHeading = document.getElementById("my-heading");
+myHeading.style.backgroundColor = "yellow";
+myHeading.style.textAllign = "center";
+console.log(myHeading);
+
+
+const fruits = document.getElementsByClassName("fruits");
+
+
+fruits[0].style.backgroundColor = "yellow";
+
+for(let fruit of fruits){
+    fruit.style.backgroundColor = "yellow";
+}
+console.log(fruits);
+
+
+fruits.forEach(); //dotn work 
+
+Array.from(fruits).forEach(fruit =>){
+    fruit.style.backgroundColor="yellow";
+}
+
+
+
+consth4Elements = document.getElementsByTagName("h4");
+
+const liElements = document.getElementsByTagName("li")
+h4Elements[0].style.backgroundColor = "yellow";
+
+
+for (let liElements of liElements){
+
+
+
+Array.from(h4Elements).forEach(h4Element =>){
+
+}
+
 /*/
 
 
 
+//Dom Navigation:
+// ----------- EXAMPLE 3 <li> -----------
 
+// STEP 1 CREATE THE ELEMENT
+const newListItem = document.createElement("li");
 
+// STEP 2 ADD ATTRIBUTES/PROPERTIES
+newListItem.textContent = "coconut";
+newListItem.id = "coconut";
+newListItem.style.fontWeight = "bold";
+newListItem.style.backgroundColor = "lightgreen";
+
+// STEP 3 APPEND ELEMENT TO DOM
+document.body.append(newListItem);
+// document.body.prepend(newLink);
+// document.getElementById("box1").append(newLink);
+// document.getElementById("box4").prepend(newLink);
+
+// const box4 = document.getElementById("box4");
+// document.body.insertBefore(newLink, box4);
+
+// const boxes = document.querySelectorAll(".box");
+// document.body.insertBefore(newLink, boxes[4]);
+
+// REMOVE HTML ELEMENT
+// document.body.removeChild(newLink);
