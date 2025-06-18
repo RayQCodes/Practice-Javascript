@@ -1,34 +1,53 @@
-//load the DOM
 document.addEventListener("DOMContentLoaded", () => {
-  const submitbtn = document.getElementById("add-task-btn");
-  const parents = document.getElementById("todo-list");
+  const todolist = document.getElementById("todo-list");
+  const button = document.getElementById("add-task-btn");
   let inputs = document.getElementById("todo-input");
 
-  let items = [];
+  let totaltasks = JSON.parse(localStorage.getItem("totaltasks")) || [];
 
-  submitbtn.addEventListener("click", function () {
+  totaltasks.forEach((taskobj) => {
+    let li = document.createElement("li");
+    li.textContent = taskobj.text;
+
+    let button2 = document.createElement("button");
+    button2.textContent = "delete";
+    li.appendChild(button2);
+
+    button2.addEventListener("click", () => {
+      totaltasks = totaltasks.filter((t) => t.text !== taskobj.text);
+      localStorage.setItem("totaltasks", JSON.stringify(totaltasks));
+      li.remove();
+    });
+
+    todolist.appendChild(li);
+  });
+
+  button.addEventListener("click", function () {
     let tasks = inputs.value.trim();
     if (tasks === "") {
       return;
     }
-    //creating
-    let tasksobj = {
-      text: tasks,
-      time: Date.now(),
-      completed: false,
-    };
-    items.push(tasksobj);
-    tasks.value = "";
-    let li = document.createElement("li");
-    li.textContent = tasks;
-    parents.appendChild(li);
 
-    let removebtn = document.createElement("button");
-    removebtn.textContent = "delete";
-    li.appendChild(removebtn);
-    removebtn.addEventListener("click", function () {
+    let taskobj = {
+      text: tasks,
+    };
+    totaltasks.push(taskobj);
+    localStorage.setItem("totaltasks", JSON.stringify(totaltasks));
+
+    let li = document.createElement("li");
+    li.textContent = taskobj.text;
+
+    let button2 = document.createElement("button");
+    button2.textContent = "delete";
+    li.appendChild(button2);
+
+    button2.addEventListener("click", () => {
+      totaltasks = totaltasks.filter((t) => t.text !== taskobj.text);
+      localStorage.setItem("totaltasks", JSON.stringify(totaltasks));
       li.remove();
     });
-    
+
+    todolist.appendChild(li); //
+    inputs.value = "";
   });
 });
