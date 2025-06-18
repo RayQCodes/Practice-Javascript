@@ -1,0 +1,15 @@
+{
+  "window.autoDetectColorScheme": false,
+  "editor.autoClosingComments": "always",
+  "editor.autoClosingOvertype": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.find.autoFindInSelection": "always",
+  "editor.fontFamily": "Mono Lisa",
+  "editor.fontSize": 18,
+  "terminal.integrated.fontSize": 22,
+  "window.zoomLevel": 1,
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true
+}
