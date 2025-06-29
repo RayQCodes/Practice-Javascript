@@ -1,3 +1,4 @@
+//this application creates a quiz for the user!
 document.addEventListener("DOMContentLoaded", () => {
   //buttons
   const startButton = document.getElementById("start-btn");
