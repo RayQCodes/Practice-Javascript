@@ -3,18 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dark Mode To-Do List</title>
+    <title>Quiz App</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
-      <h1>To-Do List</h1>
-      <div class="input-container">
-        <input type="text" id="todo-input" placeholder="Add a new task..." />
-        <button id="add-task-btn">Add Task</button>
+      <h1>Quiz App</h1>
+      <div id="quiz-container">
+        <div id="question-container" class="hidden">
+          <h2 id="question-text"></h2>
+          <ul id="choices-list">
+            <!-- Choices will be added dynamically here -->
+          </ul>
+          <button id="next-btn" class="hidden">Next Question</button>
+        </div>
+        <div id="result-container" class="hidden">
+          <h2>Your Score:</h2>
+          <p id="score"></p>
+          <button id="restart-btn">Restart Quiz</button>
+        </div>
+        <button id="start-btn">Start Quiz</button>
       </div>
-      <ul id="todo-list"></ul>
     </div>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
