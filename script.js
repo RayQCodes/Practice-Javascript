@@ -82,6 +82,9 @@ function selectAnswer(choice){
   const correctAnswer = questions[currentQuestionIndex].answer;
   if(choice === correctAnswer){
     score++;
+    window.alert("good job you just got this question correct");
+  } else{ 
+     window.alert("Bro lock in this shi wrong");
   }
  nextButton.classList.remove('hidden'); 
   }
